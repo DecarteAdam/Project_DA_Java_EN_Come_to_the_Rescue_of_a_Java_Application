@@ -27,6 +27,10 @@ public class AnalyticsCounter {
 		result =  calculSymptoms.CalculSymptoms();
 		System.out.println(result);
 
+		/* Generate a new 'result.out' output file */
+		GenerateSymptomsDataFile generateSymptomsDataFile = new GenerateSymptomsDataFile(result);
+		generateSymptomsDataFile.Generate();
+
 		/*// first get input
 		BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
 		String line = reader.readLine();
