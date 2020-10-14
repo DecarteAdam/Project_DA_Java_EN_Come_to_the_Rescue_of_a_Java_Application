@@ -14,13 +14,13 @@ import java.util.logging.Logger;
  *
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
-
+	private final String filepath;
 	
 	/**
 	 * 
 	 * @param filepath a full or partial path to file with symptom strings in it, one per line
 	 */
-	private String filepath;
+
 
 	private final static Logger LOGGER = Logger.getLogger(ReadSymptomDataFromFile.class.getName());
 
@@ -30,9 +30,11 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		this.filepath = filepath;
 	}
 
-	/* Read the file */
+	/** Read the file
+	 * @return file from the path
+	 * */
 	@Override
-	public List<String> GetSymptoms() {
+	public List<String> getSymptoms() {
 		ArrayList<String> result = new ArrayList<>();
 		if (filepath != null) {
 			try {

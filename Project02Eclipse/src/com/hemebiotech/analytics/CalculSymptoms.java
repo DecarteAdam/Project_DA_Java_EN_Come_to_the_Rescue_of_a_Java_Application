@@ -12,9 +12,11 @@ public class CalculSymptoms implements ICalculSymptoms {
         this.result = list;
     }
 
-    /* Count duplicates of elements */
+    /** Count duplicates of elements
+     * @return a map with counted symptoms
+     * */
     @Override
-    public Map<String, Integer> CalculSymptoms() {
+    public Map<String, Integer> calculSymptoms() {
 
         Map<String, Integer> newArr = new TreeMap<>(String::compareTo);
         for (String i: result){
