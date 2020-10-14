@@ -22,6 +22,11 @@ public class AnalyticsCounter {
 		System.out.println(list);
 
 
+		/* Compute symptoms in 'symptoms.txt' file */
+		CalculSymptoms calculSymptoms = new CalculSymptoms(list);
+		result =  calculSymptoms.CalculSymptoms();
+		System.out.println(result);
+
 		/*// first get input
 		BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
 		String line = reader.readLine();
