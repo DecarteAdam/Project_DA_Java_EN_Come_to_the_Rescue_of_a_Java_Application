@@ -3,6 +3,8 @@ package com.hemebiotech.analytics;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Map;
 
 public class AnalyticsCounter {
 	private static int headacheCount = 0;	// initialize to 0
@@ -10,7 +12,17 @@ public class AnalyticsCounter {
 	private static int pupilCount = 0;		// initialize to 0
 	
 	public static void main(String args[]) throws Exception {
-		// first get input
+
+		Map<String, Integer> result;
+		ArrayList<String> list;
+
+		/* Read the 'symptoms.txt file */
+		ReadSymptomDataFromFile readSymptomDataFromFile = new ReadSymptomDataFromFile("/Users/adam/Desktop/OC_Projects/Project02Eclipse/src/resources/symptoms.txt");
+		list = (ArrayList<String>) readSymptomDataFromFile.GetSymptoms();
+		System.out.println(list);
+
+
+		/*// first get input
 		BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
 		String line = reader.readLine();
 
@@ -31,7 +43,7 @@ public class AnalyticsCounter {
 			}
 
 			line = reader.readLine();	// get another symptom
-		}
+		}*/
 		
 		// next generate output
 		FileWriter writer = new FileWriter ("result.out");
