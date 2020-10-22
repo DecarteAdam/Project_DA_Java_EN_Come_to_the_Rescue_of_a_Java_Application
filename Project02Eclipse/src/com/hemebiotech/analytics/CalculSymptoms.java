@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Count all duplicate elements in arrayList
+ */
 public class CalculSymptoms implements ICalculSymptoms {
 
     ArrayList<String> result;
@@ -12,9 +15,9 @@ public class CalculSymptoms implements ICalculSymptoms {
         this.result = list;
     }
 
-    /** Count duplicates of elements
-     * @return a map with counted symptoms
-     * */
+    /**
+     * @return newArr stock all counted elements into Map
+     */
     @Override
     public Map<String, Integer> calculSymptoms() {
 

@@ -10,29 +10,20 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Simple brute force implementation
- *
+ * Read the the txt file
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 	private final String filepath;
-	
-	/**
-	 * 
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
-	 */
-
-
 	private final static Logger LOGGER = Logger.getLogger(ReadSymptomDataFromFile.class.getName());
-
-
 
 	public ReadSymptomDataFromFile(String filepath) {
 		this.filepath = filepath;
 	}
 
-	/** Read the file
-	 * @return file from the path
-	 * */
+	/* Read the file */
+	/**
+	 * @return result an arrayList of elements in txt file
+	 */
 	@Override
 	public List<String> getSymptoms() {
 		ArrayList<String> result = new ArrayList<>();

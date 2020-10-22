@@ -1,9 +1,12 @@
 package com.hemebiotech.analytics;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Map;
 
+
+/**
+ * Interface that calls Generate method to generate output
+ *
+ */
 public interface IGenerate {
-    ArrayList<Map.Entry<String, Integer>> generate() throws IOException;
+    void generate() throws IOException;
 }
